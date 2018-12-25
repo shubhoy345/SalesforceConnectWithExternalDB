@@ -108,7 +108,7 @@ public class CrudOperationWithLead {
 	 
 	        // Run codes to query, insert, update and delete records in Salesforce using REST API
 	        queryLeads();
-	        createLeads();
+	        createExternalLeadDB();
 	        deleteLeads();        
 	 
 	        // release connection
@@ -181,7 +181,7 @@ public class CrudOperationWithLead {
         }
     }   
     
-    public static void createLeads() {
+    public static void createExternalLeadDB() {
         System.out.println("\n_______________ Lead INSERT _______________");
      
             String uri = baseUri + "/sobjects/trainrider__ExternalLeadDatase__c/";
@@ -231,9 +231,9 @@ public class CrudOperationWithLead {
                 String response_string = EntityUtils.toString(response.getEntity());
                 JSONObject json = new JSONObject(response_string);
                 // Store the retrieved lead id to use when we update the lead.
-                leadId = json.getString("id");
+               String ExternalDBId = json.getString("id");
                 System.out.println("record inserted...");
-                System.out.println("New Lead id from response: " + leadId);
+                System.out.println("New Lead id from response: " + ExternalDBId);
             } else {
                 System.out.println("Insertion unsuccessful. Status code returned is " + statusCode);
             }
