@@ -15,8 +15,8 @@ import org.json.JSONTokener;
 
 public class SalesforceConnect {
 
-	static final String USERNAME     = "shuboypanda@gmail.com";
-    static final String PASSWORD     = "Shuboy$123wyxdrBjfiysHH8BgxzdGXWp2";
+	static final String USERNAME     = "your saleforce username";
+    static final String PASSWORD     = "sfdc loginpassword with security token";
     static final String LOGINURL     = "https://login.salesforce.com";
     static final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
     static final String CLIENTID     = "3MVG9_zfgLUsHJ5pcLvz1njiXea0rxR0bJ1mANaRii.MkDnXryszKMaEGmWJWzBRLTQX7tqmQEOMNXTrPwmZ5";
